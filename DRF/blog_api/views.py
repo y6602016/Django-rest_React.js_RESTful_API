@@ -1,7 +1,7 @@
 from rest_framework import generics
 from blog.models import Post
 from .serializers import PostSerializer
-from rest_framework.permissions import SAFE_METHODS, BasePermission, IsAdminUser, DjangoModelPermissions, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import SAFE_METHODS, BasePermission, IsAdminUser,DjangoModelPermissions, IsAuthenticatedOrReadOnly, IsAuthenticated
 
 class PostUserWritePermission(BasePermission):
     message = 'Editing posts is retricted to the author only.'
