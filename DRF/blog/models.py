@@ -11,7 +11,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    # Postobjects is model manager, it helps the home page only displays
+    # Postobjects is a model manager, it helps the home page only displays
     # the post which has status 'published'
     class PostObjects(models.Manager):
         def get_queryset(self):
